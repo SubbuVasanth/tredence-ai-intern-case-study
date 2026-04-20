@@ -1,8 +1,9 @@
-The Self-Pruning Neural Network
-
-Tredence Analytics AI Engineering Internship - Case Study
+# The Self-Pruning Neural Network
+### AI Engineering Internship - Case Study
 
 This repository contains an implementation of a dynamic, self-pruning neural network designed to optimize its architecture during training. Instead of a post-training compression step, this network identifies and removes unnecessary connections on the fly using a learnable gating mechanism and L1-based sparsity regularization.
+
+---
 
 ## Key Features & Design Decisions
 
