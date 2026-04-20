@@ -70,3 +70,12 @@ python main.py
 ├── plots/              # Generated results and histograms
 ├── main.py             # Entry point for experiment execution
 └── requirements.txt    # Project dependencies
+
+
+### Execution Logs
+Below is a screenshot of the terminal output showing the training progress and final results across all three λ values.
+
+<img width="1067" height="917" alt="image" src="https://github.com/user-attachments/assets/1fa4ebfb-c5d6-4696-93bf-72d6e387a0ed" />
+
+<img width="1072" height="576" alt="image" src="https://github.com/user-attachments/assets/080113a3-a795-4df4-b830-e712a4bf6a75" />
+
