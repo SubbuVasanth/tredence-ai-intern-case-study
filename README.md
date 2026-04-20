@@ -4,7 +4,7 @@ Tredence Analytics AI Engineering Internship - Case Study
 
 This repository contains an implementation of a dynamic, self-pruning neural network designed to optimize its architecture during training. Instead of a post-training compression step, this network identifies and removes unnecessary connections on the fly using a learnable gating mechanism and L1-based sparsity regularization.
 
-## 🚀 Key Features & Design Decisions
+## Key Features & Design Decisions
 
 * **Modular Architecture:** The project is organized into distinct modules (`models`, `utils`, `main.py`) to ensure maintainability and scalability, adhering to "Clean Architecture" principles.
 * **Custom PrunableLinear Layer:** Implemented a drop-in replacement for `nn.Linear` that utilizes a differentiable gating tensor.
@@ -14,7 +14,7 @@ This repository contains an implementation of a dynamic, self-pruning neural net
 
 ---
 
-## 🧠 Mathematical Formulation
+## Mathematical Formulation
 
 The objective is to minimize a composite loss function that balances classification performance with network sparsity:
 
@@ -27,7 +27,7 @@ $$TotalLoss = L_{CrossEntropy} + \lambda \times \sum_{i,j} |\sigma(s_{i,j})|$$
 
 ---
 
-## 📊 Results Summary
+## Results Summary
 
 The model was evaluated on the CIFAR-10 dataset across three different $\lambda$ coefficients.
 
@@ -42,21 +42,25 @@ gate_distribution.png: Located in the /plots folder, this histogram shows a clea
 sparsity_tradeoff.png: Visualizes the relationship between the regularization strength and model accuracy.
 
 Installation & Usage
-1. Requirements
-Python 3.10+
-PyTorch
-Torchvision
-Matplotlib
+1. Requirements:
+Python 3.10+,
+PyTorch,
+Torchvision,
+Matplotlib,
 tqdm
+
+
 Install dependencies:
 pip install -r requirements.txt
 
-2. Running the Experiment
+3. Running the Experiment
 Ensure you are in the root directory and have created a plots/ folder:
 mkdir plots
 python main.py
 
-Repository Structure
+## Repository Structure
+
+```text
 ├── data/               # CIFAR-10 raw data (git-ignored)
 ├── models/
 │   └── prunable_net.py # PrunableLinear & Network Definition
